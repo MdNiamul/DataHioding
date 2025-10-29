@@ -1,0 +1,19 @@
+echo "# blogspot" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/programming-hero-web-course1/b11-a6-english-janala-MdNiamul.git
+git push -u origin main
+
+
+git add .
+
+git commit -m "3rd comment"
+git push
+
+
+
+
+live link : https://mdniamul.github.io/as-dev/
+Respository link: https://github.com/MdNiamul/as-dev.git
