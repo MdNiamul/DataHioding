@@ -1,43 +1,140 @@
-# 🖼️ Image Steganography
+### WELCOME TO ASSIGNMENT-006
+# ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
 
-A simple web-based application that allows you to **hide messages inside images** (Encode) and **extract hidden messages** from images (Decode) using basic steganography techniques.
+## Private Repo Link : https://classroom.github.com/a/JPUEMrmw
 
-## 📌 Features
+ **📅 Deadline For 60 marks**: 17th March , 2025 ( 11:59 pm ⏱️)
 
-* Upload an image from your device
-* Enter a secret message to hide inside the image
-* Encode the message into the image
-* Decode and reveal the hidden message
-* Download the encoded image
-* Restart/reset the page easily
+**📅 Deadline For 50 marks**: 19th March , 2025 ( 11:59 pm ⏱️)
 
-## 🛠️ Technologies Used
+**📅 Deadline For 30 marks**: Any time after  19th March , 2025
 
-* **HTML5** – Structure of the app
-* **CSS3** – Styling and layout
-* **JavaScript** – Encoding & decoding logic
-
-## 🚀 How to Use
-
-1. **Upload an image** using the "Click to upload image" button
-2. **Type your message** in the text area
-3. Click **Encode** to hide the message in the image
-4. To reveal a hidden message, upload an encoded image and click **Decode**
-5. Use **Download Image** to save the encoded image
-6. Click **Restart** to start fresh
-
-## 📂 Project Structure
-
+---
+⚡ API Endpoints
+---
+1. Get ⚡ All Levels
+```bash
+https://openapi.programming-hero.com/api/levels/all
 ```
-.
-├── index.html      # Main HTML file
-├── style.css       # Styling for the app
-└── script.js       # Steganography logic
+2. Get ⚡ Words by Levels <br/>
+https:// openapi.programming-hero.com/api/level/{id}
+```bash
+https://openapi.programming-hero.com/api/level/5
+```
+3. Get ⚡ Words Detail <br/>
+https:// openapi.programming-hero.com/api/word/{id}
+```bash
+https://openapi.programming-hero.com/api/word/5
+```
+4. Get ⚡ All  Words <br/>
+
+```bash
+https://openapi.programming-hero.com/api/words/all
 ```
 
-## 📸 Preview
-<img width="1904" height="1079" alt="image" src="https://github.com/user-attachments/assets/65cbe376-23da-4b90-840e-0dd627ab4904" />
+# Requirements 
 
-## 📄 License
+### Navbar
+- [ ] Create a navbar with a logo and brand name on the left
+- [ ] Create three buttons with icons: FAQ, Learn, and Logout
+- [ ] when clicking the FAQ button user will jump to the FAQ section 
+- [ ] when clicking the Learn button user will jump to the Vocabulary section 
+- [ ] Navbar will be fixed at the top with a bottom border
 
-This project is licensed under the **MIT License** – feel free to use and modify it.
+### Banner
+- [ ] Create a banner with a title and paragraph along with a login form on the left as Figma
+- [ ] image on the right as Figma
+- [ ] Align elements as per the Figma design
+
+### FAQ Section
+- [ ] Create an FAQ section containing Following  questions and answers as Figma
+  - [ ] the difference between `var`, `let`, and `const`
+  - [ ] the difference between `map()`, `forEach()`, and `filter()`
+  - [ ] explain arrow functions and how they are different from regular functions
+  - [ ] how JavaScript Promises work
+  - [ ] how closures work in JavaScript
+
+### Footer
+- [ ] Create a footer that includes the logo and social icons as per Figma
+- [ ] redirect users to his social profiles in a new Tab when clicking on social icons
+
+### Vocabulary Section
+- [ ] Show a center-aligned heading as Figma
+---
+- [ ] Create dynamically generated buttons from **API-01** for each lesson
+- [ ] Lesson Buttons will be displayed on page load
+---
+- [ ] Show a default text that will be displayed in the Vocabulary section initially
+- [ ] on Clicking a Specific Lesson Button  Load All the words from  **API-02** 
+- [ ] Display all words for a selected lesson in a card format, showing:
+  - [ ] Word
+  - [ ] Word meaning & pronunciation
+  - [ ] Two buttons with relevant icons as per Figma
+---
+- [ ] Show ***No Word Found** message  if no words exist for a lesson
+---
+- [ ] Create functionality to highlight the active lesson button
+---
+
+
+### Vocabulary Details
+- [ ] Create functionality to open a modal when clicking the details icon
+- [ ] Data will be load from **API-03**
+- [ ] modal will  displays:
+  - [ ] Word with pronunciation
+  - [ ] Example sentence
+  - [ ] Synonyms
+  - [ ] A "Complete Learning" button to close the modal
+
+
+## Challenge Requirements
+
+### Custom Navigation & Smooth scrolling 
+- [ ] hide everything on landing except the Banner and Footer
+- [ ] Create a functional login form:
+  - [ ] Show an alert if the user does not enter a name
+  - [ ] Show an alert if the password is not "123456"
+- [ ]  when the user enters a valid name and password
+  - [ ] Show a  alert with a success message,
+  - [ ] hide the Banner
+  - [ ] display the Navbar, Vocabulary Section, and FAQ Section 
+---
+- [ ] when clicking "Logout"
+  - [ ] hide the Navbar, Vocabulary Section, and FAQ Section
+  - [ ]  show only the Banner and Footer
+- [ ] Apply smooth scrolling for FAQ & Learn buttons
+
+### Handling Invalid Data
+- [ ] avoid displaying falsy values like `undefined` or `null`
+- [ ] display relevant words if no data is found
+
+### Loading Spinner
+- [ ] Create a loading spinner that will be display when vocabulary is loading from API 
+
+## Optional: Be a Perfectionist
+
+⚠️ Their is No Mark for Optional Requirement.  You won't get any support for any of  the optional Part. But we strongly recommend you to give a try after completing all the requirement.
+
+---
+### Sweet Alert - https://sweetalert2.github.io/#download 
+- [ ] Explore Sweet ALert Documentation  <br/>
+integrate it with your app. replace all the basic alert with a normal alert <br/>
+Follow this [Documentation](https://sweetalert2.github.io/) 
+---
+### Speak your Vocabularies
+- [ ] Create functionality for voice pronunciation of vocabulary words
+- [ ] Use below function and implement on clicking sound icon
+```js
+ function pronounceWord(word) {
+      const utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-EN'; // English
+      window.speechSynthesis.speak(utterance);
+    }
+```
+For More >>  you can explore this implementation 👉  [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
+
+---
+### Custom Font integration 
+- [ ] integrate a local Bengali font for Bangla words given in assets
+- [ ] use this font on every Bengali words
+- [ ] Search , Research , Explore  If you dont know how to do it. 
